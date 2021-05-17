@@ -1,0 +1,17 @@
+<table class="table  table-bordered">
+  <tr>
+    <th *ngFor="let header of headers"> {{header | uppercase}} </th>
+    <th> Actions </th>
+  </tr>
+
+  <tr *ngFor="let student of students">
+    <ng-container *ngFor="let header of headers">
+      <td> {{student[header]}} </td>
+    </ng-container>
+    <td>
+      <span class="badge bg-danger" style="cursor: pointer;" (click)="deleteStudent(student._id)">Delete</span> &nbsp;&nbsp;&nbsp;
+      <span class="badge bg-secondary" style="cursor: pointer;" [routerLink]="['/update-students',student._id]">Update</span> &nbsp;&nbsp;&nbsp;
+      <span class="badge bg-primary" style="cursor: pointer;" [routerLink]="['/view-students',student._id]"> View </span>
+    </td>
+  </tr>
+</table>

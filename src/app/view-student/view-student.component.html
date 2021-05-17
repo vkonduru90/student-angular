@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" class="card-img-top"
+    alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{student?.name | uppercase}}</h5>
+    Roll Num: <h6 class="card-text"> {{student?.rollNumber}}</h6>
+    Email: <h6 class="card-text"> {{student?.email}}</h6>
+    Is Active: <h6 class="card-text"> {{student?.isActive}}</h6>
+    <a href="#" class="btn btn-primary" [routerLink]="['/update-students',student._id]">Edit</a>
+  </div>
+</div>
