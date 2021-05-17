@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { StudentService } from '../services/student.service';
+import { IStudent } from './IStuddent';
 
 @Component({
   selector: 'app-view-student',
@@ -8,7 +9,7 @@ import { StudentService } from '../services/student.service';
   styleUrls: ['./view-student.component.css'],
 })
 export class ViewStudentComponent implements OnInit {
-  student = {};
+  student: IStudent;
   constructor(public route: ActivatedRoute, public __ss: StudentService) {}
 
   ngOnInit(): void {
